@@ -1,14 +1,38 @@
 # Vim Asciidoc Folding
 
-This plugin enables folding in Asciidoc document. Currently, it can fold:
+This plugin enables folding in Asciidoc document.
+
+Currently, it can fold:
 
 * Section headings (nesting is deliberately avoided)
 * Comments
-//* Blocks
+
+[NOTE]
+.Things to be done:
+--
+
+* Improve `foldexpression`, it's too quick & dirty
+* Add block folding
+* Add option to disable
+* Customize `foldtext` and `foldchars`
+* Documentation
+--
 
 ## Installation
 
-TBD
+If you are using https://github.com/gmarik/vundle[Vundle], place this in your `.vimrc`:
+
+	Plugin 'blablatros/vim-asciidoc-folding'
+
+Then run the following in Vim:
+
+	:source %
+	:PluginInstall
+
+If you are using https://github.com/tpope/vim-pathogen[Pathogen], run the following in your terminal:
+
+	cd ~/.vim/bundle
+	git clone https://github.com/blablatros/vim-asciidoc-folding
 
 ## Usage
 
