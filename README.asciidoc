@@ -1,0 +1,23 @@
+# Vim Asciidoc Folding
+
+This plugin enables folding in Asciidoc document. Currently, it can fold:
+
+* Section headings (nesting is deliberately avoided)
+* Comments
+//* Blocks
+
+## Installation
+
+TBD
+
+## Usage
+
+TBD
+
+## Configuration
+
+TBD, if any
+
+## License
+
+MIT license, see `LICENSE`
