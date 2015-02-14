@@ -7,17 +7,6 @@ Currently, it can fold:
 * Section headings (nesting is deliberately avoided)
 * Comments
 
-[NOTE]
-.Things to be done:
---
-
-* Improve `foldexpression`, it's too quick & dirty
-* Add block folding
-* Add option to disable
-* Customize `foldtext` and `foldchars`
-* Documentation
---
-
 ## Installation
 
 If you are using https://github.com/gmarik/vundle[Vundle], place this in your `.vimrc`:
