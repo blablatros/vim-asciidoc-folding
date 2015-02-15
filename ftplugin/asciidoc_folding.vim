@@ -1,9 +1,5 @@
 function! AsciiDocFold(lnum)
 	let current_line = getline(a:lnum)
-"	if current_line =~? '\v^\s*$'
-"		" line is blank
-"		return '1'
-"	elseif
 
 	if current_line =~ '\v^[=#]+\s.+$'
 		" line is a heading
@@ -16,6 +12,9 @@ function! AsciiDocFold(lnum)
 		" inline admonition
 		return '10'
 		return '10'
+	elseif current_line =~? '\v^\s*$'
+		" line is blank
+		return b:blank_level
 	else
 		" return same as previous
 		" WARNING: coments can be glued with other paragraphs
