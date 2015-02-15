@@ -19,14 +19,5 @@ function! AsciiDocFold(lnum)
 	endif
 endfunction
 
-"augroup vim_asciidoc_folding
-"	autocmd!
-"	" it is your responsibility to set sytax to asciidoc!
-"	au Syntax asciidoc setlocal foldexpr=AsciiDocFold(v:lnum)
-"	au Syntax asciidoc setlocal foldmethod=expr
-"	"au BufEnter *.asciidoc setlocal foldexpr=AsciiDocFold(v:lnum)
-"	"au BufEnter *.asciidoc setlocal foldmethod=expr
-"augroup END
-
 setlocal foldexpr=AsciiDocFold(v:lnum)
 setlocal foldmethod=expr
