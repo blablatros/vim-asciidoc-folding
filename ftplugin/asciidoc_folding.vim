@@ -4,8 +4,11 @@ function! AsciiDocFold(lnum)
 "		" line is blank
 "		return '1'
 "	elseif
-	if current_line =~ '^=\+ .*$'
+
+	if current_line =~ '\v^[=#]+\s.+$'
 		" line is a heading
+		" asciidoctor allows # for headings as well
+		let b:blank_level = '1'
 		return '>1'
 	elseif current_line =~ '^//.*$'
 		" line is a comment
