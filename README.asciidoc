@@ -1,18 +1,18 @@
-# Vim Asciidoc Folding
+# Vim Asciidoc Superfold
 
-This plugin enables folding in Asciidoc document.
+Vim plugin for folding Asciidoc documents.
 
-Currently, it can fold:
+Currently, it folds:
 
-* Section headings (nesting is deliberately avoided)
-* Comments
-* Blocks (with delimiters, or just block name in brackets)
+* Section headings (nesting is deliberately avoided; currently it does not work with 2-line/setext headings)
+* Comments (single-line or block style comments)
+* Blocks (blocks with delimiters, or with just a block name in brackets)
 
 ## Installation
 
 If you are using https://github.com/gmarik/vundle[Vundle], place this in your `.vimrc`:
 
-	Plugin 'blablatros/vim-asciidoc-folding'
+	Plugin 'blablatros/vim-asciidoc-superfold'
 
 Then run the following in Vim:
 
@@ -22,7 +22,7 @@ Then run the following in Vim:
 If you are using https://github.com/tpope/vim-pathogen[Pathogen], run the following in your terminal:
 
 	cd ~/.vim/bundle
-	git clone https://github.com/blablatros/vim-asciidoc-folding
+	git clone https://github.com/blablatros/vim-asciidoc-superfold
 
 ## Usage
 
