@@ -12,6 +12,9 @@ function! AsciiDocFold(lnum)
 		return '>1'
 	elseif current_line =~ '^//.*$'
 		" line is a comment
+	elseif current_line =~ '\v%(TIP|NOTE|IMPORTANT|WARNING|CAUTION):\s.*$'
+		" inline admonition
+		return '10'
 		return '10'
 	else
 		" return same as previous
