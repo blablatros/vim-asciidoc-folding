@@ -9,6 +9,19 @@ function! AsciiDocFold(lnum)
 	elseif current_line =~ '\v%(TIP|NOTE|IMPORTANT|WARNING|CAUTION):\s.*$'
 		" inline admonition
 		return '10'
+	elseif current_line =~ '\v\[.+\]$'
+		" block opening
+		" WARNING: will match special heading types (e.g. glossary, floating, etc.)
+		" not a problem unless set fml=0
+		return '>10' " nested blocks will not work!
+	elseif current_line =~ '\v^--|[-+/.*_=]{4,}$'
+		" multi-paragraph block, opening|closing
+		" WARNING: will match 2-line headings
+		if b:blank_level =~ '1' " opening
+			let b:blank_level = '10'
+		elseif b:blank_level =~ '10' " closing
+			let b:blank_level = '1'
+		endif
 		return '10'
 	elseif current_line =~ '\v^//.*$'
 		" line is a comment
