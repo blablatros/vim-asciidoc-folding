@@ -6,6 +6,7 @@ Currently, it can fold:
 
 * Section headings (nesting is deliberately avoided)
 * Comments
+* Blocks (with delimiters, or just block name in brackets)
 
 ## Installation
 
