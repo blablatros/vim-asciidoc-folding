@@ -14,8 +14,9 @@ function! AsciiDocFold(lnum)
 		" line is a comment
 		return '10'
 	else
-		" return same level as a heading
-		return '1'
+		" return same as previous
+		" WARNING: coments can be glued with other paragraphs
+		return '='
 	endif
 endfunction
 
